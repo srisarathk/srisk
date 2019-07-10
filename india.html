@@ -3,7 +3,6 @@
 
     <head>
 
-            
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
@@ -13,8 +12,10 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/style.css">
+
         <link rel="shortcut icon" href="assets/img/logo.png">
-        <!-- Javascript -->
+
+         <!-- Javascript -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
         <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -24,7 +25,6 @@
         <script src="assets/js/retina-1.1.0.min.js"></script>
         <script src="assets/js/waypoints.min.js"></script>
         <script src="assets/js/scripts.js"></script>
-        
     </head>
 
     <body>
@@ -55,23 +55,46 @@
 		    </div>
 		</nav>
 
-                <div class="container">
                     <br>
                     <br>
                     <br> 
-          <table>
-          <tr>
-          <th>                  
-          <iframe width="480" height="272"  src="https://www.youtube.com/embed/vEy6tcU6eLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	        <th>
-          <iframe width="480" height="272" src="https://www.youtube.com/embed/8RhRokdQtoo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></th>
-          <tr>
-          <th>  
-          <iframe width="480" height="272" src="https://www.youtube.com/embed/6mDsa-AqNcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <th>
-          <iframe width="480" height="272" src="https://www.youtube.com/embed/r0JjEK_eKSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe> 
-
-        
+            <div class="container">
+                <div class="row">
+                    <div class="col section-1 section-description wow fadeInUp">
+                     <div class="container mt-3">
+  <h2>Subjects</h2>
+  <p>Find the subject you wish to learn:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <ul class="list-group" id="myList">
+    <li class="list-group-item"><a href = "geography.html" data-toggle="tooltip" data-placement="bottom" title="Learn about various countries">Geography</a></li>
+    <li class="list-group-item"><a href = "#" data-toggle="tooltip" data-placement="bottom" title="Learn about our past">History</a></li>
+    <li class="list-group-item"><a href = "#" data-toggle="tooltip" data-placement="bottom" title="Learn about the language and literature">English</a></li>
+    <li class="list-group-item"><a href = "#" data-toggle="tooltip" data-placement="bottom" title="Learn about numbers">Math</a></li>
+    <li class="list-group-item"><a href = "geography.html" data-toggle="tooltip" data-placement="bottom" title="Learn about life">Biology</a></li>
+    <li class="list-group-item"><a href = "geography.html" data-toggle="tooltip" data-placement="bottom" title="Learn about chemicals">Chemistry</a></li>
+    <li class="list-group-item"><a href = "geography.html" data-toggle="tooltip" data-placement="bottom" title="Learn about money">Economics</a></li>
+    <li class="list-group-item"><a href = "geography.html" data-toggle="tooltip" data-placement="bottom" title="Learn about various laws of nature">Physics</a></li>
+  </ul>  
+</div>
+<br>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+                        
+                </div>
 
     </body>
 
